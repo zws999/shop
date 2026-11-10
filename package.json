@@ -1,0 +1,31 @@
+{
+  "name": "303-services-shop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node scripts/migrate.js",
+    "owner": "node scripts/owner.js",
+    "test": "node --test --test-concurrency=1",
+    "worker": "node scripts/worker.js",
+    "check": "node scripts/check.js"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.15",
+    "@noble/hashes": "^2.4.0",
+    "@node-rs/argon2": "^2.0.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "pdfkit": "^0.17.2",
+    "pg": "^8.16.3",
+    "qrcode": "^1.5.4",
+    "zod": "^4.1.13"
+  }
+}

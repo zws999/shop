@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0b0a10">
+  <title>303 Control Center</title>
+  <link rel="icon" href="/brand/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="/admin.css?v=1">
+  <script src="/admin.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to workspace</a>
+  <div id="login-view" class="gate" hidden>
+    <div class="gate-decoration" aria-hidden="true"></div>
+    <div class="gate-panel">
+      <a href="/" class="brand gate-brand" aria-label="303 Services/Shop home">
+        <span class="brand-mark">303</span><span class="brand-name">CONTROL<span> CENTER</span></span>
+      </a>
+      <p class="eyebrow"><span class="signal"></span> RESTRICTED WORKSPACE</p>
+      <h1>Owner sign-in</h1>
+      <p class="muted">Use your owner credentials and authenticator to continue.</p>
+      <form id="owner-login">
+        <label>Username<input name="username" required autocomplete="username"></label>
+        <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+        <label>Authenticator or recovery code<input name="otp" required autocomplete="one-time-code"></label>
+        <button class="button primary" type="submit">Enter control center <span aria-hidden="true">↗</span></button>
+        <p id="login-status" class="error-text" role="alert"></p>
+      </form>
+      <a href="/" class="gate-link">← Return to storefront</a>
+    </div>
+  </div>
+  <div id="workspace" class="workspace" hidden>
+    <aside class="sidebar" id="sidebar">
+      <a href="#overview" class="brand" aria-label="303 Control Center overview">
+        <span class="brand-mark">303</span>
+        <span class="brand-name">CONTROL<span> CENTER</span></span>
+      </a>
+      <nav id="navigation" aria-label="Control Center"></nav>
+      <div class="sidebar-footer">
+        <a href="/" class="store-link">View storefront <span aria-hidden="true">↗</span></a>
+        <button type="button" class="account-control" id="sign-out">
+          <span class="avatar">03</span>
+          <span><strong id="account-name">Owner</strong><small>Sign out</small></span>
+          <span class="chevron" aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </aside>
+    <div id="mobile-backdrop" class="mobile-backdrop" hidden></div>
+    <div class="work-area">
+      <header class="topbar">
+        <div class="topbar-left"><button type="button" class="icon-button menu-button" id="toggle-navigation" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">☰</button><span>Workspace</span><span class="separator">/</span><strong id="breadcrumb">Overview</strong></div>
+        <span class="private-badge"><span class="signal"></span> Private workspace</span>
+      </header>
+      <main id="main" tabindex="-1" aria-live="polite"></main>
+      <footer class="workspace-footer"><span>303 SERVICES / SHOP</span><span>OWNER OPERATIONS</span></footer>
+    </div>
+  </div>
+  <div class="notifications" id="notifications" aria-live="polite"></div>
+  <dialog id="editor"><div class="dialog-content" id="editor-content"></div></dialog>
+  <noscript><p class="noscript">Enable JavaScript to access the owner workspace.</p></noscript>
+</body>
+</html>

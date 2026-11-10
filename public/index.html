@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08080c">
+  <meta name="description" content="Discover a new standard in digital products and services from 303 Services/Shop.">
+  <meta property="og:title" content="303 Services/Shop">
+  <meta property="og:description" content="Digital shopping. Redefined.">
+  <meta property="og:type" content="website">
+  <title>303 Services/Shop | Digital shopping. Redefined.</title>
+  <link rel="icon" href="/brand/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="stylesheet" href="/storefront.css?v=2">
+  <script src="/storefront.js?v=2" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a href="#/" class="brand" aria-label="303 Services/Shop home">
+        <img src="/brand/wordmark.svg?v=2" width="47" height="30" alt="">
+        <span class="brand-name">SERVICES<span class="brand-slash">/</span>SHOP</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#/" data-nav="/">Home</a>
+        <a href="#/shop" data-nav="/shop">Shop</a>
+        <a href="#/categories" data-nav="/categories">Categories</a>
+        <a href="#/reviews" data-nav="/reviews">Reviews</a>
+        <a href="#/faq" data-nav="/faq">FAQ</a>
+        <a href="#/support" data-nav="/support">Support</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-button" href="#/shop?search=1" aria-label="Search products" data-icon="search"></a>
+        <a class="icon-button" href="#/account" aria-label="Customer account" data-icon="user"></a>
+        <button class="icon-button cart-trigger" type="button" aria-label="Open shopping cart" data-action="open-cart" data-icon="bag">
+          <span id="cart-count" class="cart-count" hidden>0</span>
+        </button>
+        <button class="icon-button mobile-menu" type="button" data-action="mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav" data-icon="menu"></button>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" tabindex="-1" aria-busy="true">
+    <div class="shell initial-loading">
+      <div class="skeleton loading-line"></div>
+      <div class="skeleton loading-title"></div>
+      <div class="skeleton loading-copy"></div>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-heading"></dialog>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="shell">Enable JavaScript to browse the shop and manage your orders.</p></noscript>
+</body>
+</html>
